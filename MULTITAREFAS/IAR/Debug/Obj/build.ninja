@@ -1,0 +1,29 @@
+#Generating source browse information for project prj0
+
+
+#Abbreviations
+cc = E$:\PSE\common\bin\SourceIndexer.exe
+ll = E$:\PSE\common\bin\PbdLink.exe
+bd = E$:\PSE\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build cpu-port.pbi : index cpu-port.xcl
+build main.pbi : index main.xcl
+build multitarefas.pbi : index multitarefas.xcl
+build prj0.pbd : link cpu-port.pbi main.pbi multitarefas.pbi
+build prj0.pbw : browsedata prj0.pbd
+
+
