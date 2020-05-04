@@ -5303,13 +5303,27 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@236@macro@TAM_PILHA_1",
+    "ID": "c:@F@tarefa_per",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tarefa_per(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
+    },
+    "name": "tarefa_per",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@260@macro@TAM_PILHA_1",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TAM_PILHA_1",
     "location": {
       "column": "9",
-      "line": "15",
+      "line": "16",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "TAM_PILHA_1",
@@ -5317,13 +5331,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@282@macro@TAM_PILHA_2",
+    "ID": "c:main.c@306@macro@TAM_PILHA_2",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TAM_PILHA_2",
     "location": {
       "column": "9",
-      "line": "16",
+      "line": "17",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "TAM_PILHA_2",
@@ -5331,13 +5345,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@328@macro@TAM_PILHA_3",
+    "ID": "c:main.c@352@macro@TAM_PILHA_3",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TAM_PILHA_3",
     "location": {
       "column": "9",
-      "line": "17",
+      "line": "18",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "TAM_PILHA_3",
@@ -5345,13 +5359,27 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@374@macro@TAM_PILHA_OCIOSA",
+    "ID": "c:main.c@398@macro@TAM_PILHA_4",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TAM_PILHA_4",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
+    },
+    "name": "TAM_PILHA_4",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@444@macro@TAM_PILHA_OCIOSA",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TAM_PILHA_OCIOSA",
     "location": {
       "column": "9",
-      "line": "18",
+      "line": "20",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "TAM_PILHA_OCIOSA",
@@ -5365,7 +5393,7 @@
     "display": "PILHA_TAREFA_1",
     "location": {
       "column": "10",
-      "line": "23",
+      "line": "25",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "PILHA_TAREFA_1",
@@ -5379,7 +5407,7 @@
     "display": "PILHA_TAREFA_2",
     "location": {
       "column": "10",
-      "line": "24",
+      "line": "26",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "PILHA_TAREFA_2",
@@ -5393,10 +5421,24 @@
     "display": "PILHA_TAREFA_3",
     "location": {
       "column": "10",
-      "line": "25",
+      "line": "27",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "PILHA_TAREFA_3",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@PILHA_TAREFA_4",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "PILHA_TAREFA_4",
+    "location": {
+      "column": "10",
+      "line": "28",
+      "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
+    },
+    "name": "PILHA_TAREFA_4",
     "origin": "project_file",
     "scope": null
   },
@@ -5407,7 +5449,7 @@
     "display": "PILHA_TAREFA_OCIOSA",
     "location": {
       "column": "10",
-      "line": "26",
+      "line": "29",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "PILHA_TAREFA_OCIOSA",
@@ -5421,7 +5463,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "31",
+      "line": "34",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "main",
@@ -5435,7 +5477,7 @@
     "display": "void tarefa_1(void)",
     "location": {
       "column": "6",
-      "line": "59",
+      "line": "64",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "tarefa_1",
@@ -5443,13 +5485,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1464@F@tarefa_1@a",
+    "ID": "c:main.c@1672@F@tarefa_1@a",
     "What": "Variable",
     "defdec": "Def",
     "display": "a",
     "location": {
       "column": "20",
-      "line": "61",
+      "line": "66",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "a",
@@ -5463,7 +5505,7 @@
     "display": "void tarefa_2(void)",
     "location": {
       "column": "6",
-      "line": "70",
+      "line": "75",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "tarefa_2",
@@ -5471,13 +5513,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1571@F@tarefa_2@b",
+    "ID": "c:main.c@1779@F@tarefa_2@b",
     "What": "Variable",
     "defdec": "Def",
     "display": "b",
     "location": {
       "column": "20",
-      "line": "72",
+      "line": "77",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "b",
@@ -5491,7 +5533,7 @@
     "display": "void tarefa_teste(void)",
     "location": {
       "column": "6",
-      "line": "80",
+      "line": "85",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "tarefa_teste",
@@ -5499,16 +5541,44 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1680@F@tarefa_teste@c",
+    "ID": "c:main.c@1888@F@tarefa_teste@c",
     "What": "Variable",
     "defdec": "Def",
     "display": "c",
     "location": {
       "column": "20",
-      "line": "82",
+      "line": "87",
       "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
     },
     "name": "c",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tarefa_per",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void tarefa_per(void)",
+    "location": {
+      "column": "6",
+      "line": "95",
+      "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
+    },
+    "name": "tarefa_per",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1995@F@tarefa_per@d",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "d",
+    "location": {
+      "column": "20",
+      "line": "97",
+      "path": "E:\\PSE\\elc1048\\MULTITAREFAS\\IAR\\main.c"
+    },
+    "name": "d",
     "origin": "project_file",
     "scope": null
   },

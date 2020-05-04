@@ -14,10 +14,10 @@
 /* macros de configuracao */
 
 /* numero de tarefas */
-#define NUMERO_DE_TAREFAS	4
+#define NUMERO_DE_TAREFAS	5
 
 /* número de prioridades/tarefas */
-#define PRIORIDADE_MAXIMA   5
+#define PRIORIDADE_MAXIMA   6
 
 /* frequencia de clock da CPU */
 #define cfg_CPU_CLOCK_HZ 	48000000
