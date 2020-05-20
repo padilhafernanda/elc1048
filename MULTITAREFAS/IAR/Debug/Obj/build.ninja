@@ -2,9 +2,9 @@
 
 
 #Abbreviations
-cc = E$:\PSE\common\bin\SourceIndexer.exe
-ll = E$:\PSE\common\bin\PbdLink.exe
-bd = E$:\PSE\common\bin\makeBrowseData.exe
+cc = E$:\Aulas\PSE\common\bin\SourceIndexer.exe
+ll = E$:\Aulas\PSE\common\bin\PbdLink.exe
+bd = E$:\Aulas\PSE\common\bin\makeBrowseData.exe
 
 
 

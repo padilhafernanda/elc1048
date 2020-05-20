@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"E:\PSE\common\bin\cspybat" -f "E:\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.general.xcl" --backend -f "E:\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.driver.xcl" 
+"E:\Aulas\PSE\common\bin\cspybat" -f "E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.general.xcl" --backend -f "E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"E:\PSE\common\bin\cspybat" -f "E:\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.driver.xcl" 
+"E:\Aulas\PSE\common\bin\cspybat" -f "E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\settings\prj0.Debug.driver.xcl" 
 
 @echo off 
 :end

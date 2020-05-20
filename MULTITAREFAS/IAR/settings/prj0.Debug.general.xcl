@@ -1,10 +1,10 @@
-"E:\PSE\arm\bin\armproc.dll" 
+"E:\Aulas\PSE\arm\bin\armproc.dll" 
 
-"E:\PSE\arm\bin\armsim2.dll" 
+"E:\Aulas\PSE\arm\bin\armsim2.dll" 
 
-"E:\PSE\elc1048\MULTITAREFAS\IAR\Debug\Exe\prj0.out" 
+"E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\Debug\Exe\prj0.out" 
 
---plugin="E:\PSE\arm\bin\armbat.dll" 
+--plugin="E:\Aulas\PSE\arm\bin\armbat.dll" 
 
 
 

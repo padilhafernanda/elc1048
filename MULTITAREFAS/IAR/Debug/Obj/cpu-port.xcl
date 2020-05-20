@@ -1,20 +1,20 @@
-"E:\PSE\elc1048\MULTITAREFAS\IAR\cpu-port.c"
+"E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\cpu-port.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-E:\PSE\elc1048\MULTITAREFAS\IAR\Debug\Obj\cpu-port.pbi.dep
+E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR\Debug\Obj\cpu-port.pbi.dep
 -o
 cpu-port.pbi
 -I
-E:\PSE\elc1048\MULTITAREFAS\IAR
+E:\Aulas\PSE\elc1048\MULTITAREFAS\IAR
 -I
 C:\DADOS_LOCAIS\GITHUB\elc1048\MULTITAREFAS\IAR
 -I
-E:\PSE\arm\inc
+E:\Aulas\PSE\arm\inc
 -I
-E:\PSE\arm\inc\c
+E:\Aulas\PSE\arm\inc\c
 -I
 C:\DADOS_LOCAIS\GITHUB\elc1048\MULTITAREFAS\IAR
 -D__CHAR_BITS__=8
@@ -268,8 +268,8 @@ C:\DADOS_LOCAIS\GITHUB\elc1048\MULTITAREFAS\IAR
 -D__EDG_FLOAT80_ENABLING_POSSIBLE=0
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -D__EDG_INT128_EXTENSIONS_ALLOWED=0
--D_DLIB_CONFIG_FILE_HEADER_NAME="E:\PSE\arm\inc\c\DLib_Config_Normal.h"
--D_DLIB_CONFIG_FILE_STRING="E:\\PSE\\arm\\inc\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="E:\Aulas\PSE\arm\inc\c\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_STRING="E:\\Aulas\\PSE\\arm\\inc\\c\\DLib_Config_Normal.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V8.50.1.245/W32 for ARM"
 -D_VA_DEFINED=
 -D_VA_LIST=struct __va_list
