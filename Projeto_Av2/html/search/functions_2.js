@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['taskanalogread_18',['TaskAnalogRead',['../_p_s_e___projeto___funcionando3_01-_01_copia_8c.html#a06f0d69284e1cbc32d1cbe24b5a8b3b3',1,'TaskAnalogRead(void *pvParameters):&#160;PSE_Projeto_Funcionando3 - Copia.c'],['../_p_s_e___projeto___funcionando3_01-_01_copia_8c.html#afa76cb204fe10ae677cbe4ce7ff141c6',1,'TaskAnalogRead(void *pvParameters __attribute__((unused))):&#160;PSE_Projeto_Funcionando3 - Copia.c']]],
+  ['tasktempatual_19',['TaskTempAtual',['../_p_s_e___projeto___funcionando3_01-_01_copia_8c.html#adb54143630e6f14beb531f83d869cf4d',1,'TaskTempAtual(void *pvParameters):&#160;PSE_Projeto_Funcionando3 - Copia.c'],['../_p_s_e___projeto___funcionando3_01-_01_copia_8c.html#a915cd12bba03b2b2a2f5a86a813ee00d',1,'TaskTempAtual(void *pvParameters __attribute__((unused))):&#160;PSE_Projeto_Funcionando3 - Copia.c']]],
+  ['tasktempmedia_20',['TaskTempMedia',['../_p_s_e___projeto___funcionando3_01-_01_copia_8c.html#a37f916c948cd90b4f8db6fbb37d7e370',1,'TaskTempMedia(void *pvParameters):&#160;PSE_Projeto_Funcionando3 - Copia.c'],['../_p_s_e___projeto___funcionando3_01-_01_copia_8c.html#abfa62b28f7e1c0fb3162e95e64b8df2e',1,'TaskTempMedia(void *pvParameters __attribute__((unused))):&#160;PSE_Projeto_Funcionando3 - Copia.c']]]
+];
