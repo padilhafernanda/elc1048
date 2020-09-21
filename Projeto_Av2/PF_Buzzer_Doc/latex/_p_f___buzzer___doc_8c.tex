@@ -1,0 +1,297 @@
+\hypertarget{_p_f___buzzer___doc_8c}{}\doxysection{E\+:/\+Aulas/\+P\+S\+E/elc1048/\+Projeto\+\_\+\+Av2/\+P\+F\+\_\+\+Buzzer\+\_\+\+Doc/\+P\+F\+\_\+\+Buzzer\+\_\+\+Doc.c File Reference}
+\label{_p_f___buzzer___doc_8c}\index{E:/Aulas/PSE/elc1048/Projeto\_Av2/PF\_Buzzer\_Doc/PF\_Buzzer\_Doc.c@{E:/Aulas/PSE/elc1048/Projeto\_Av2/PF\_Buzzer\_Doc/PF\_Buzzer\_Doc.c}}
+{\ttfamily \#include $<$Arduino\+\_\+\+Free\+R\+T\+O\+S.\+h$>$}\newline
+{\ttfamily \#include $<$semphr.\+h$>$}\newline
+{\ttfamily \#include $<$queue.\+h$>$}\newline
+{\ttfamily \#include $<$task.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpin_read}{pin\+Read}}
+\begin{DoxyCompactList}\small\item\em Estrutura utilizada para ler dados do sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_a06f0d69284e1cbc32d1cbe24b5a8b3b3}{Task\+Analog\+Read}} (void $\ast$pv\+Parameters)
+\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_adb54143630e6f14beb531f83d869cf4d}{Task\+Temp\+Atual}} (void $\ast$pv\+Parameters)
+\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_a37f916c948cd90b4f8db6fbb37d7e370}{Task\+Temp\+Media}} (void $\ast$pv\+Parameters)
+\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_acb8825188fee5758fd2581f02160999b}{Task\+Buzzer}} (void $\ast$pv\+Parameters)
+\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Função que executa quando liga a placa ou aperta o botão reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_afa76cb204fe10ae677cbe4ce7ff141c6}{Task\+Analog\+Read}} (void $\ast$pv\+Parameters \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)))
+\begin{DoxyCompactList}\small\item\em Tarefa que lê dados do sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_a915cd12bba03b2b2a2f5a86a813ee00d}{Task\+Temp\+Atual}} (void $\ast$pv\+Parameters \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)))
+\begin{DoxyCompactList}\small\item\em Tarefa que consome dado da fila se disponível;. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_abfa62b28f7e1c0fb3162e95e64b8df2e}{Task\+Temp\+Media}} (void $\ast$pv\+Parameters \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)))
+\begin{DoxyCompactList}\small\item\em Tarefa que consome o buffer para cálculo da média. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_f___buzzer___doc_8c_ab6e9016a68e033d9e09ad008e15bb881}{Task\+Buzzer}} (void $\ast$pv\+Parameters \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)))
+\begin{DoxyCompactList}\small\item\em Tarefa que controla o buzzer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Semaphore\+Handle\+\_\+t \mbox{\hyperlink{_p_f___buzzer___doc_8c_a642a4265a30ef969b172df7c201b94b0}{x\+Serial\+Semaphore}}
+\item 
+int \mbox{\hyperlink{_p_f___buzzer___doc_8c_adf916204820072417ed73a32de1cefcf}{flag}}
+\begin{DoxyCompactList}\small\item\em Controla o buffer para cálculo da Média. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_p_f___buzzer___doc_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}}
+\begin{DoxyCompactList}\small\item\em Contador de preenchimento do buffer da Média. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_p_f___buzzer___doc_8c_acb559820d9ca11295b4500f179ef6392}{i}}
+\begin{DoxyCompactList}\small\item\em Variável de controle do buzzer. ~\newline
+ \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_p_f___buzzer___doc_8c_aa74bc454d141c17a890b34689c53517e}{buffer\+Temp}} \mbox{[}10\mbox{]}
+\item 
+const int \mbox{\hyperlink{_p_f___buzzer___doc_8c_a121c707cd98aaa1f99307f4bca178f39}{pin\+Buzzer}} = 11
+\begin{DoxyCompactList}\small\item\em Indica a porta digital ligada ao buzzer. \end{DoxyCompactList}\item 
+Queue\+Handle\+\_\+t \mbox{\hyperlink{_p_f___buzzer___doc_8c_ad26d7a71057cdb13eeaed4f762b4cf07}{struct\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_afe461d27b9c48d5921c00d521181f12f}\label{_p_f___buzzer___doc_8c_afe461d27b9c48d5921c00d521181f12f}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!loop@{loop}}
+\index{loop@{loop}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Vazio. Tudo é feito nas tarefas.\mbox{\Hypertarget{_p_f___buzzer___doc_8c_a4fc01d736fe50cf5b977f755b675f11d}\label{_p_f___buzzer___doc_8c_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!setup@{setup}}
+\index{setup@{setup}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que executa quando liga a placa ou aperta o botão reset. 
+
+Inicia a comunicação serial a 9600 bits por segundo.
+
+Espera a porta serial conectar.
+
+Confirma que a conexão foi estabelecida.(Debug)
+
+Checa se o semáforo da porta serial já não foi criado.
+
+Cria a mutex que controla a porta serial.
+
+Torna a porta serial disponível, \char`\"{}dando\char`\"{} o semáforo.
+
+Cria a fila de dados do sensor.
+
+Verifica se a fila foi criada. ~\newline
+
+
+Cria tarefas que serão executadas independentemente.
+
+Cria a tarefa para consumir dados da fila.
+
+Cria a tarefa para cálculo da média. ~\newline
+
+
+Cria a tarefa produtora de dados da fila.
+
+Cria a tarefa que emite sons no buzzer.
+
+Agora, o escalonador de tarefas, que assume o controle do escalonamento de tarefas individuais, é iniciado automaticamente.\mbox{\Hypertarget{_p_f___buzzer___doc_8c_afa76cb204fe10ae677cbe4ce7ff141c6}\label{_p_f___buzzer___doc_8c_afa76cb204fe10ae677cbe4ce7ff141c6}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskAnalogRead@{TaskAnalogRead}}
+\index{TaskAnalogRead@{TaskAnalogRead}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskAnalogRead()}{TaskAnalogRead()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+Analog\+Read (\begin{DoxyParamCaption}\item[{void $\ast$pv\+Parameters }]{\+\_\+\+\_\+attribute\+\_\+\+\_\+(unused) }\end{DoxyParamCaption})}
+
+
+
+Tarefa que lê dados do sensor. 
+
+Codificação dos valores lidos em tensão para temperatura. Fonte\+: \href{https://portal.vidadesilicio.com.br/lm35-medindo-temperatura-com-arduino/}{\texttt{ https\+://portal.\+vidadesilicio.\+com.\+br/lm35-\/medindo-\/temperatura-\/com-\/arduino/}}
+
+Posta um item na fila. \href{https://www.freertos.org/a00117.html}{\texttt{ https\+://www.\+freertos.\+org/a00117.\+html}}
+
+Um tick de atraso (15ms) entre as leituras para estabilidade.\mbox{\Hypertarget{_p_f___buzzer___doc_8c_a06f0d69284e1cbc32d1cbe24b5a8b3b3}\label{_p_f___buzzer___doc_8c_a06f0d69284e1cbc32d1cbe24b5a8b3b3}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskAnalogRead@{TaskAnalogRead}}
+\index{TaskAnalogRead@{TaskAnalogRead}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskAnalogRead()}{TaskAnalogRead()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+Analog\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_ab6e9016a68e033d9e09ad008e15bb881}\label{_p_f___buzzer___doc_8c_ab6e9016a68e033d9e09ad008e15bb881}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskBuzzer@{TaskBuzzer}}
+\index{TaskBuzzer@{TaskBuzzer}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskBuzzer()}{TaskBuzzer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+Buzzer (\begin{DoxyParamCaption}\item[{void $\ast$pv\+Parameters }]{\+\_\+\+\_\+attribute\+\_\+\+\_\+(unused) }\end{DoxyParamCaption})}
+
+
+
+Tarefa que controla o buzzer. 
+
+Fonte\+:http\+://www.squids.\+com.\+br/arduino/index.php/projetos-\/arduino/projetos-\/squids/basico/137-\/projeto-\/36-\/controlando-\/frequencia-\/de-\/um-\/buzzer-\/com-\/potenciometro
+
+Frequência tocada no buzzer. ~\newline
+
+
+Variável para guardar o valor consumido do buffer.
+
+Consome dado do buffer.
+
+Caso a temperatura atinja valor superior a 29, codifica os valores de temperatura
+
+entre 30 e 80 para valores de frequencia entre 0 e 2500.
+
+Buzzer emite som para cada leitura acima de 29.
+
+Se não for detectada temperatura superior a 29, o som do buzzer apenas será alterado na chamada de no\+Tone().
+
+Se não há dados no buffer (k=0), buzzer não consome dados.
+
+Reseta variável de controle do buzzer.
+
+Silencia o buzzer até a próxima chamada de tone().\mbox{\Hypertarget{_p_f___buzzer___doc_8c_acb8825188fee5758fd2581f02160999b}\label{_p_f___buzzer___doc_8c_acb8825188fee5758fd2581f02160999b}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskBuzzer@{TaskBuzzer}}
+\index{TaskBuzzer@{TaskBuzzer}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskBuzzer()}{TaskBuzzer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+Buzzer (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_a915cd12bba03b2b2a2f5a86a813ee00d}\label{_p_f___buzzer___doc_8c_a915cd12bba03b2b2a2f5a86a813ee00d}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskTempAtual@{TaskTempAtual}}
+\index{TaskTempAtual@{TaskTempAtual}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskTempAtual()}{TaskTempAtual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+Temp\+Atual (\begin{DoxyParamCaption}\item[{void $\ast$pv\+Parameters }]{\+\_\+\+\_\+attribute\+\_\+\+\_\+(unused) }\end{DoxyParamCaption})}
+
+
+
+Tarefa que consome dado da fila se disponível;. 
+
+Read an item from a queue. \href{https://www.freertos.org/a00118.html}{\texttt{ https\+://www.\+freertos.\+org/a00118.\+html}}
+
+Verifica se ainda não foram armazenados 10 dados no buffer da média.
+
+A variável de controle do buzzer recebe contador do buffer.
+
+Caso não, flag continua em 0.
+
+Se o semáforo estiver disponível, a tarefa consegue o controle da porta serial.
+
+Comunica o valor lido da fila.
+
+Posição do buffer no momento.
+
+Libera a porta serial.
+
+Incrementa a variável de controle do buffer.
+
+Caso o contador atinja 10,
+
+reseta a variável de controle do buzzer para evitar leitura do buffer.
+
+Altera a flag e sinaliza que a média pode ser calculada.\mbox{\Hypertarget{_p_f___buzzer___doc_8c_adb54143630e6f14beb531f83d869cf4d}\label{_p_f___buzzer___doc_8c_adb54143630e6f14beb531f83d869cf4d}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskTempAtual@{TaskTempAtual}}
+\index{TaskTempAtual@{TaskTempAtual}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskTempAtual()}{TaskTempAtual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+Temp\+Atual (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_abfa62b28f7e1c0fb3162e95e64b8df2e}\label{_p_f___buzzer___doc_8c_abfa62b28f7e1c0fb3162e95e64b8df2e}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskTempMedia@{TaskTempMedia}}
+\index{TaskTempMedia@{TaskTempMedia}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskTempMedia()}{TaskTempMedia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+Temp\+Media (\begin{DoxyParamCaption}\item[{void $\ast$pv\+Parameters }]{\+\_\+\+\_\+attribute\+\_\+\+\_\+(unused) }\end{DoxyParamCaption})}
+
+
+
+Tarefa que consome o buffer para cálculo da média. 
+
+Variável que guarda a média.
+
+Variável que guarda o acumulado dos dados do buffer.
+
+Verifica se a flag foi alterada para 1.
+
+Executa laço para cálculo da média dos valores guardados no buffer.
+
+Reseta a flag para confirmar que os dados do buffer foram consumidos e podem ser substituidos.
+
+Reseta variável de controle do buffer.
+
+Verifica se a porta serial está disponível. Caso obtenha o controle do semáforo, ~\newline
+
+
+comunica o valor da média pela porta serial.
+
+Reseta a variável da média.
+
+Reseta variável do acumulado.
+
+Libera a porta serial.
+
+Se ainda não foram feitas 10 leituras, a média não será calculada. ~\newline
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_a37f916c948cd90b4f8db6fbb37d7e370}\label{_p_f___buzzer___doc_8c_a37f916c948cd90b4f8db6fbb37d7e370}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!TaskTempMedia@{TaskTempMedia}}
+\index{TaskTempMedia@{TaskTempMedia}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{TaskTempMedia()}{TaskTempMedia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+Temp\+Media (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_aa74bc454d141c17a890b34689c53517e}\label{_p_f___buzzer___doc_8c_aa74bc454d141c17a890b34689c53517e}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!bufferTemp@{bufferTemp}}
+\index{bufferTemp@{bufferTemp}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{bufferTemp}{bufferTemp}}
+{\footnotesize\ttfamily float buffer\+Temp\mbox{[}10\mbox{]}}
+
+Vetor que guarda 10 dados lidos do sensor para ser calculada a média pela task Temp\+Media. \mbox{\Hypertarget{_p_f___buzzer___doc_8c_adf916204820072417ed73a32de1cefcf}\label{_p_f___buzzer___doc_8c_adf916204820072417ed73a32de1cefcf}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!flag@{flag}}
+\index{flag@{flag}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily int flag}
+
+
+
+Controla o buffer para cálculo da Média. 
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_acb559820d9ca11295b4500f179ef6392}\label{_p_f___buzzer___doc_8c_acb559820d9ca11295b4500f179ef6392}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!i@{i}}
+\index{i@{i}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int i}
+
+
+
+Variável de controle do buzzer. ~\newline
+ 
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_ab66ed8e0098c0a86b458672a55a9cca9}\label{_p_f___buzzer___doc_8c_ab66ed8e0098c0a86b458672a55a9cca9}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!k@{k}}
+\index{k@{k}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int k}
+
+
+
+Contador de preenchimento do buffer da Média. 
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_a121c707cd98aaa1f99307f4bca178f39}\label{_p_f___buzzer___doc_8c_a121c707cd98aaa1f99307f4bca178f39}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!pinBuzzer@{pinBuzzer}}
+\index{pinBuzzer@{pinBuzzer}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{pinBuzzer}{pinBuzzer}}
+{\footnotesize\ttfamily const int pin\+Buzzer = 11}
+
+
+
+Indica a porta digital ligada ao buzzer. 
+
+\mbox{\Hypertarget{_p_f___buzzer___doc_8c_ad26d7a71057cdb13eeaed4f762b4cf07}\label{_p_f___buzzer___doc_8c_ad26d7a71057cdb13eeaed4f762b4cf07}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!structQueue@{structQueue}}
+\index{structQueue@{structQueue}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{structQueue}{structQueue}}
+{\footnotesize\ttfamily Queue\+Handle\+\_\+t struct\+Queue}
+
+Handle da fila que a task Analog\+Read envia dados lidos do sensor. \mbox{\Hypertarget{_p_f___buzzer___doc_8c_a642a4265a30ef969b172df7c201b94b0}\label{_p_f___buzzer___doc_8c_a642a4265a30ef969b172df7c201b94b0}} 
+\index{PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}!xSerialSemaphore@{xSerialSemaphore}}
+\index{xSerialSemaphore@{xSerialSemaphore}!PF\_Buzzer\_Doc.c@{PF\_Buzzer\_Doc.c}}
+\doxysubsubsection{\texorpdfstring{xSerialSemaphore}{xSerialSemaphore}}
+{\footnotesize\ttfamily Semaphore\+Handle\+\_\+t x\+Serial\+Semaphore}
+
+Declaração da mutex Semaphore Handle que vai controlar a Serial Port. Garante que apenas uma tarefa controla a serial a cada vez. 

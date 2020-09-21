@@ -29,19 +29,24 @@
 SemaphoreHandle_t xSerialSemaphore;
 /// Estrutura utilizada para ler dados do sensor.
 struct pinRead {
-  int pin; ///Pino lido da placa.
-  float value; /// Valor lido.
+  ///Pino lido da placa.
+  int pin; 
+  /// Valor lido da placa.
+  float value; 
 };
-
-int flag; /// Controla o buffer para cálculo da Média.
-int k;    /// Contador de preenchimento do buffer da Média.
-int i; /// Variável de controle do buzzer.
+/// Controla o buffer para cálculo da Média.
+int flag; 
+/// Contador de preenchimento do buffer da Média.
+int k; 
+/// Variável de controle do buzzer.   
+int i; 
 
 ///  Vetor que guarda 10 dados lidos do sensor para ser
 /// calculada a média pela task TempMedia.
 float bufferTemp[10];
 
-const int pinBuzzer = 11; /// Indica a porta digital ligada ao buzzer
+/// Indica a porta digital ligada ao buzzer
+const int pinBuzzer = 11; 
 
 ///  Handle da fila que a task AnalogRead envia dados
 /// lidos do sensor.
@@ -53,8 +58,8 @@ void TaskTempAtual( void *pvParameters );
 void TaskTempMedia( void *pvParameters );
 void TaskBuzzer( void *pvParameters );
 
-
-void setup() /// Função que executa quando liga a placa ou aperta o botão reset.
+/// Função que executa quando liga a placa ou aperta o botão reset.
+void setup() 
 {
   /// Inicia a comunicação serial a 9600 bits por segundo.
   Serial.begin(9600);  
@@ -83,7 +88,7 @@ void setup() /// Função que executa quando liga a placa ou aperta o botão res
 
   xTaskCreate(TaskAnalogRead,"AnalogRead",128,NULL,2,NULL);/// Cria a tarefa produtora de dados da fila.
 
-  xTaskCreate(TaskBuzzer,"BuzzerTone",128,NULL,2,NULL);/// Cria a tarefa produtora de dados da fila.
+  xTaskCreate(TaskBuzzer,"BuzzerTone",128,NULL,2,NULL);/// Cria a tarefa que emite sons no buzzer.
   }
   /// Agora, o escalonador de tarefas, que assume o controle do escalonamento de tarefas individuais, é iniciado automaticamente.
 }
@@ -97,7 +102,8 @@ void loop()
 ///*---------------------- Tasks ---------------------*/
 ///*--------------------------------------------------*/
 
-void TaskAnalogRead( void *pvParameters __attribute__((unused)) )/// Tarefa que lê dados do sensor.
+/// Tarefa que lê dados do sensor.
+void TaskAnalogRead( void *pvParameters __attribute__((unused)) )
 { 
   for (;;){
     struct pinRead currentPinRead;
@@ -114,7 +120,8 @@ void TaskAnalogRead( void *pvParameters __attribute__((unused)) )/// Tarefa que 
   }
 }
 
-void TaskTempAtual( void *pvParameters __attribute__((unused)) )///Tarefa que consome dado do buffer se disponível;
+///Tarefa que consome dado da fila se disponível;
+void TaskTempAtual( void *pvParameters __attribute__((unused)) )
 {
   for (;;){
     struct pinRead currentPinRead;
@@ -142,11 +149,14 @@ void TaskTempAtual( void *pvParameters __attribute__((unused)) )///Tarefa que co
   }   
 }
 
-void TaskTempMedia( void *pvParameters __attribute__((unused)) )///Tarefa que consome o buffer para cálculo da média.
+///Tarefa que consome o buffer para cálculo da média.
+void TaskTempMedia( void *pvParameters __attribute__((unused)) )
 {
   for (;;){
-    float media; /// Variável que guarda a média.
-    float acumulado; /// Variável que guarda o acumulado dos dados do buffer.
+	/// Variável que guarda a média.
+    float media; 
+	/// Variável que guarda o acumulado dos dados do buffer.
+    float acumulado; 
    
     if(flag==1){ /// Verifica se a flag foi alterada para 1.
       /// Executa laço para cálculo da média dos valores guardados no buffer.
@@ -172,13 +182,16 @@ void TaskTempMedia( void *pvParameters __attribute__((unused)) )///Tarefa que co
   } 
 }   
 
-void TaskBuzzer( void *pvParameters __attribute__((unused)) )///Tarefa que consome o buffer para cálculo da média.
+///Tarefa que controla o buzzer.
+void TaskBuzzer( void *pvParameters __attribute__((unused)) )
 {  
   /// Fonte:http://www.squids.com.br/arduino/index.php/projetos-arduino/projetos-squids/basico/137-projeto-36-controlando-frequencia-de-um-buzzer-com-potenciometro
   for (;;) 
   {
-    int frequency; ///Frequência tocada no buzzer.    
-    int atual; /// Variável para guardar o valor consumido do buffer.
+	///Frequência tocada no buzzer.  
+    int frequency;     
+	/// Variável para guardar o valor consumido do buffer.
+    int atual; 
     if (i>0){
       atual=  bufferTemp[i]; /// Consome dado do buffer.
       if(atual>29){ /// Caso a temperatura atinja valor superior a 29, codifica os valores de temperatura
