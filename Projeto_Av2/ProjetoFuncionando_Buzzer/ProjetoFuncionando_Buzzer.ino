@@ -1,24 +1,3 @@
-//-------------------------------------------------------------------------//
-//                  Universidade Federal de Santa Maria                    //
-//                   Curso de Engenharia de Computação                     //
-//                ELC 1048 - Projeto de Sistemas Embarcados                //
-//                                                                         //
-//   Programador:                                                          //
-//       Fernanda Hamdan Padilha (2019520380)                              //
-//   Professor:                                                            //
-//       Carlos Henrique Barriquello                                       //
-//   Versão: 3.0 - Data: 21/09/2020                                        //
-//=========================================================================//
-//                         Descrição do Programa                           //
-//=========================================================================//
-//  Projeto desenvolvido para avaliação 2 da disciplina.                   //
-//  Monitoramento da temperatura atual, armazenamento em buffer e cálculo  //
-//  da média dos últimos 10 dados.                                         //
-//  Utilizando a biblioteca FreeRTOS para Arduino.                         //
-//  Sensor: LM35                                                           //
-//  Saída: Porta serial e Buzzer                                           //
-//-------------------------------------------------------------------------//
-
 #include <Arduino_FreeRTOS.h>
 #include <semphr.h>  
 #include <queue.h>  
